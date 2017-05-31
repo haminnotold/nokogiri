@@ -1,0 +1,22 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+* {
+  font-family: 'Jeju Gothic', serif;
+}
+
+.best {
+  background-color: #fff591;
+}
+
+.home {
+  background-image: url("http://www.mygraphichunt.com/wp-content/uploads/2015/08/wpid-food-background-pattern-vector-640x640.jpg");
+  background-repeat: repeat;
+}
+.container {
+  background-color: white;
+}

@@ -1,0 +1,65 @@
+<div class="home">
+<div class="container px-5">
+      <h1 class="text-center mb-5 pt-5">안암학사 식단표</h1>
+      <a href="get_anam" style="float:right" class="btn btn-danger mb-4">식단표 가져오기 click</a>
+      <div style="float:right" class="best btn mr-3">노란 배경은 민영이가 뽑은 추천 메뉴!</div>
+
+      <% if @mon %>
+          <h2>기간: <%= @mon.date %>~<%= @sat.date %></h2>
+          <table class="table">
+              <thead>
+                <tr>
+                    <th></th>
+                    <th>조식A</th>
+                    <th>조식B</th>
+                    <th>중식</th>
+                    <th>석식</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <th scope="row">월(<%= @mon.date %>)</th>
+                    <td><%= @mon.breakfast_a %></td>
+                    <td><%= @mon.breakfast_b %></td>
+                    <td><%= @mon.lunch %></td>
+                    <td><%= @mon.dinner %></td>
+                </tr>
+                <tr>
+                    <th scope="row">화(<%= @tue.date %>)</th>
+                    <td><%= @tue.breakfast_a %></td>
+                    <td><%= @tue.breakfast_b %></td>
+                    <td class="best"><%= @tue.lunch %></td>
+                    <td><%= @tue.dinner %></td>
+                </tr>
+                <tr>
+                    <th scope="row">수(<%= @wed.date %>)</th>
+                    <td><%= @wed.breakfast_a %></td>
+                    <td><%= @wed.breakfast_b %></td>
+                    <td><%= @wed.lunch %></td>
+                    <td><%= @wed.dinner %></td>
+                </tr>
+                <tr>
+                    <th scope="row">목(<%= @thu.date %>)</th>
+                    <td><%= @thu.breakfast_a %></td>
+                    <td><%= @thu.breakfast_b %></td>
+                    <td><%= @thu.lunch %></td>
+                    <td><%= @thu.dinner %></td>
+                </tr>
+                <tr>
+                    <th scope="row">금(<%= @fri.date %>)</th>
+                    <td colspan="2"><%= @fri.breakfast_a %><br>(종류 1가지)</td>
+                    <td><%= @fri.lunch %></td>
+                    <td class="best"><%= @fri.dinner %></td>
+                </tr>
+                <tr>
+                    <th scope="row">토(<%= @sat.date %>)</th>
+                    <td colspan="2"><%= @sat.breakfast_a %><br>(종류 1가지)</td>
+                    <td><%= @sat.lunch %></td>
+                    <td><%= @sat.dinner %></td>
+                </tr>
+              </tbody>
+            </table>
+        <% end %>
+
+</div>
+</div>
